@@ -4,7 +4,7 @@
     <title>demo</title>
     <url>/2022/01/10/demo/</url>
     <content><![CDATA[<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><ul>
-<li>测试一下</li>
+<li>测试一下<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
