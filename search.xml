@@ -3,7 +3,12 @@
   <entry>
     <title>demo</title>
     <url>/2022/01/10/demo/</url>
-    <content><![CDATA[<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><ul>
+    <content><![CDATA[<!-- <p align="center"> -->
+<p> <img src="https://img.shields.io/github/license/Chocolate1999/hexo-blog-lionkk.svg" alt="License"><a href="https://github.com/Chocolate1999/hexo-blog-lionkk/network"> <img src="https://img.shields.io/github/forks/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub forks"></a> <a href="https://github.com/Chocolate1999/hexo-blog-lionkk/stargazers"> <img src="https://img.shields.io/github/stars/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub stars"></a><br><a href="https://github.com/Chocolate1999/hexo-blog-lionkk/releases"><img alt="Version" src="https://img.shields.io/badge/release-2.0.0-blue"></a><a href="https://yangchaoyi.vip/"><img alt="Author" src="https://img.shields.io/badge/author-yangchaoyi-blur"></a><br><a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-4.0+-0e83c"></a><br><a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-8.0+-blur"></a></p>
+<!-- </p> -->
+
+
+<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><ul>
 <li>测试一下<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
@@ -280,6 +285,19 @@
       </categories>
       <tags>
         <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【持续更新中】Java面试总结(基础篇)</title>
+    <url>/2022/01/12/Java%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java</category>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
 </search>
