@@ -92,6 +92,10 @@
 <li>发布博客 <code>hexo new blogname</code></li>
 <li>添加页面 <code>hexo new page pagename</code></li>
 <li>添加标签、分类、开启评论、使用博客封面<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: demo</span><br><span class="line">date: 2022-01-10 10:11:28</span><br><span class="line">tags:</span><br><span class="line">  - [test]</span><br><span class="line">categories: </span><br><span class="line">  - [test]</span><br><span class="line">cover: https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210818111502.jpg</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+<li>如何插入图片<ul>
+<li>打开github/pictures<br>进入issue<br>将图片复制到Write中，直接将链接贴至自己的blog中即可</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h4 id="一些重要的配置"><a href="#一些重要的配置" class="headerlink" title="一些重要的配置"></a>一些重要的配置</h4><blockquote>
@@ -288,9 +292,62 @@
       </tags>
   </entry>
   <entry>
-    <title>【持续更新中】Java面试总结(基础篇)</title>
-    <url>/2022/01/12/Java%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[]]></content>
+    <title>【React Hooks系列】之useState (搬运)</title>
+    <url>/2022/01/13/useState/</url>
+    <content><![CDATA[<h3 id="简单的示例"><a href="#简单的示例" class="headerlink" title="简单的示例"></a>简单的示例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义了一个button，当点击时，n+1并更新视图</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> add = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setN(n + <span class="number">1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;add&#125;</span>&gt;</span>+1,此时n:&#123;n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/58502210/149647839-eb6f3d12-28f4-4517-8c99-4d8dcfa49283.png" alt="1"></p>
+<h3 id="useState用法"><a href="#useState用法" class="headerlink" title="useState用法"></a>useState用法</h3><blockquote>
+<p>const [state, setState] = useState(initValue)</p>
+</blockquote>
+<p>useState接收一个初始值，这个初始值可以是对象，也可以是简单数据类型。<br>在初始渲染期间，返回的状态 (state) 与传入的第一个参数 (initValue) 值相同。<br>返回的setState是一个函数，它接收一个新的 state 值并将组件的一次重新渲染加入队列。</p>
+<h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><p>只能React函数组件中使用Hooks。<br>useState不能在内部的循环、条件判断、嵌套的方法中使用。</p>
+<h3 id="setState异步更新"><a href="#setState异步更新" class="headerlink" title="setState异步更新"></a>setState异步更新</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> add = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setN(n + <span class="number">1</span>);</span><br><span class="line"> +  <span class="built_in">console</span>.log(n)</span><br><span class="line"> +  setN(n+<span class="number">1</span>)</span><br><span class="line"> +  <span class="built_in">console</span>.log(n)</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;add&#125;</span>&gt;</span>+1,此时n:&#123;n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>点击之后视图上只加了1，但是log了两次，说明setN是异步的，不能立即更新，而是把所有同步代码执行完之后，再执行视图更新，而这时候入参的n还是旧的值，并没有被更新。</p>
+<p><img src="https://user-images.githubusercontent.com/58502210/149648480-85a065c0-19b5-4615-b4ff-258f0c370beb.png" alt="2"></p>
+<p>注：这时候传入的 n 由于闭包的原因，所以拿到的是旧的值。比如刚开始 n 是0，调用两次 setN 后相当于设置了两次1。<br>在React 事件中，setState 确实是异步的，为了提高性能（每次 setState 都会重新执行 hooks 函数），所以相同的setState会进行合并。</p>
+<h3 id="setN函数"><a href="#setN函数" class="headerlink" title="setN函数"></a>setN函数</h3><p>setN是可以传递函数的，它的参数是旧的n，返回新的value</p>
+<p>上面的代码如果修改成以下内容就有效</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> add = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  +   setN(<span class="function">(<span class="params">oldN</span>) =&gt;</span> &#123;</span><br><span class="line">  +   	<span class="built_in">console</span>.log(oldN);</span><br><span class="line">  +   	<span class="keyword">return</span> oldN + <span class="number">1</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  +  setN(<span class="function">(<span class="params">oldN</span>) =&gt;</span> &#123;</span><br><span class="line">  + 	<span class="built_in">console</span>.log(oldN);</span><br><span class="line">  +  	<span class="keyword">return</span> oldN + <span class="number">1</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;add&#125;</span>&gt;</span>+1,此时n:&#123;n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="state可以是对象"><a href="#state可以是对象" class="headerlink" title="state可以是对象"></a>state可以是对象</h3><p>当 useState 中的 state 为对象时，调用相应的 setState 有一些要注意的地方，useState 不会自动合并更新对象，你可以用函数式的 setState 结合展开运算符来达到合并更新对象的效果。</p>
+<h3 id="错误示例"><a href="#错误示例" class="headerlink" title="错误示例"></a>错误示例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = &#123; <span class="attr">n</span>: <span class="number">0</span>, <span class="attr">m</span>: <span class="number">0</span> &#125;;</span><br><span class="line">  <span class="keyword">const</span> [state, setState] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> addN = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setState(<span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">n</span>: state.n + <span class="number">1</span> &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">const</span> addM = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setState(<span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">m</span>: state.m + <span class="number">1</span> &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;addN&#125;</span>&gt;</span>+1,此时n:&#123;state.n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;addM&#125;</span>&gt;</span>+1,此时m:&#123;state.m&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的state不会自动帮我们合并，所以需要我们使用…运算符来帮助我们手动合并。</p>
+<h3 id="正确示例"><a href="#正确示例" class="headerlink" title="正确示例"></a>正确示例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = &#123; <span class="attr">n</span>: <span class="number">0</span>, <span class="attr">m</span>: <span class="number">0</span> &#125;;</span><br><span class="line">  <span class="keyword">const</span> [state, setState] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> addN = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setState(<span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">   +  <span class="keyword">return</span> &#123; ...state, <span class="attr">n</span>: state.n + <span class="number">1</span> &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">const</span> addM = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setState(<span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">   +  <span class="keyword">return</span> &#123; ...state, <span class="attr">m</span>: state.m + <span class="number">1</span> &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;addN&#125;</span>&gt;</span>+1,此时n:&#123;state.n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;addM&#125;</span>&gt;</span>+1,此时m:&#123;state.m&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>useState返回一对数组，第一个值是初始值，第二个值state的setter方法</li>
+<li>如果state是对象的话，需要我们手动合并</li>
+<li>setState时，可以传函数也可以传值，如果依赖于旧的state，最好使用函数的形式</li>
+</ul>
+<h3 id="转载自"><a href="#转载自" class="headerlink" title="转载自"></a>转载自</h3><blockquote>
+<p><a href="https://juejin.cn/post/6888668676711841800">https://juejin.cn/post/6888668676711841800</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【持续更新中】Java面试总结(Java基础)</title>
+    <url>/2022/01/12/Java%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h2 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h2><blockquote>
+<ul>
+<li>Java基础<a href="https:://github.com/younghz/Markdown" title="Markdown">Java基础</a></li>
+<li>Java EE(Spring)</li>
+<li>数据库</li>
+<li>计算机网络</li>
+<li>操作系统</li>
+<li>算法与数据结构</li>
+<li>Nginx</li>
+<li>Redis</li>
+<li>设计模式</li>
+<li>JVM</li>
+<li>多线程&amp;并发</li>
+</ul>
+</blockquote>
+]]></content>
       <categories>
         <category>Java</category>
         <category>面试</category>
