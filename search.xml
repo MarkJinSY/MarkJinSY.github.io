@@ -127,24 +127,6 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>Linux</title>
-    <url>/2022/01/17/Linux/</url>
-    <content><![CDATA[<h1 id="Linux命令大全"><a href="#Linux命令大全" class="headerlink" title="Linux命令大全"></a>Linux命令大全</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><ul>
-<li>远程拷贝文件到本地<ul>
-<li><code>scp jsy@10.18.254.169:/home/XXX/XXX/filename ./</code></li>
-</ul>
-</li>
-<li>远程拷贝目录到本地<ul>
-<li><code>scp -r jsy@10.18.254.169:/home/XXX/dname ./</code></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>demo</title>
     <url>/2022/01/10/demo/</url>
     <content><![CDATA[<!-- <p align="center"> -->
@@ -164,22 +146,22 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/01/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>Linux</title>
+    <url>/2022/01/17/Linux/</url>
+    <content><![CDATA[<h1 id="Linux命令大全"><a href="#Linux命令大全" class="headerlink" title="Linux命令大全"></a>Linux命令大全</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><ul>
+<li>远程拷贝文件到本地<ul>
+<li><code>scp jsy@10.18.254.169:/home/XXX/XXX/filename ./</code></li>
+</ul>
+</li>
+<li>远程拷贝目录到本地<ul>
+<li><code>scp -r jsy@10.18.254.169:/home/XXX/dname ./</code></li>
+</ul>
+</li>
+</ul>
 ]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>关于hexo</title>
@@ -187,47 +169,47 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
     <content><![CDATA[<h2 id="简单记录一下怎么使用hexo"><a href="#简单记录一下怎么使用hexo" class="headerlink" title="简单记录一下怎么使用hexo"></a>简单记录一下怎么使用hexo</h2><hr>
 <h4 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h4><ul>
 <li><code>hexo server</code> <ul>
-<li>#Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</li>
+<li>Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</li>
 </ul>
 </li>
 <li><code>hexo server -s</code> <ul>
-<li>#以静态模式启动</li>
+<li>以静态模式启动</li>
 </ul>
 </li>
 <li><code>hexo server -p 5000</code> <ul>
-<li>#更改访问端口 (默认端口为4000，’ctrl + c’关闭server)</li>
+<li>更改访问端口 (默认端口为4000，’ctrl + c’关闭server)</li>
 </ul>
 </li>
 <li><code>hexo server -i IP地址</code><ul>
-<li> #自定义 IP</li>
+<li>自定义 IP</li>
 </ul>
 </li>
 <li><code>hexo clean</code> <ul>
-<li>#清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</li>
+<li>清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</li>
 </ul>
 </li>
 <li><code>hexo g</code> 即 <code>hexo generate</code><ul>
-<li>#生成静态网页 (执行 $ hexo g后会在站点根目录下生成public文件夹, hexo会将”/blog/source/“ 下面的.md后缀的文件编译为.html后缀的文件,存放在”/blog/public/ “ 路径下)</li>
+<li>生成静态网页 (执行 $ hexo g后会在站点根目录下生成public文件夹, hexo会将”/blog/source/“ 下面的.md后缀的文件编译为.html后缀的文件,存放在”/blog/public/ “ 路径下)</li>
 </ul>
 </li>
 <li><code>hexo d</code> 即 <code>hexo deploy</code> <ul>
-<li>#将本地数据部署到远端服务器(如github)</li>
+<li>将本地数据部署到远端服务器(如github)</li>
 </ul>
 </li>
 <li><code>hexo init 文件夹名称</code><ul>
-<li> #初始化XX文件夹名称</li>
+<li>初始化XX文件夹名称</li>
 </ul>
 </li>
 <li><code>npm update hexo -g</code><ul>
-<li>#升级</li>
+<li>升级</li>
 </ul>
 </li>
 <li><code>npm install hexo -g</code><ul>
-<li>#安装</li>
+<li>安装</li>
 </ul>
 </li>
 <li><code>hexo -v</code> <ul>
-<li>#查看hexo版本号</li>
+<li>查看hexo版本号</li>
 </ul>
 </li>
 </ul>
@@ -235,7 +217,10 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 <h4 id="关于写博客"><a href="#关于写博客" class="headerlink" title="关于写博客"></a>关于写博客</h4><ul>
 <li>发布博客 <code>hexo new blogname</code></li>
 <li>添加页面 <code>hexo new page pagename</code></li>
-<li>添加标签、分类、开启评论、使用博客封面<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: demo</span><br><span class="line">date: 2022-01-10 10:11:28</span><br><span class="line">tags:</span><br><span class="line">  - [test]</span><br><span class="line">categories: </span><br><span class="line">  - [test]</span><br><span class="line">cover: https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210818111502.jpg</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+<li>添加标签、分类、开启评论、使用博客封面</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: demo</span><br><span class="line">date: 2022-01-10 10:11:28</span><br><span class="line">tags:</span><br><span class="line">  - [test]</span><br><span class="line">categories: </span><br><span class="line">  - [test]</span><br><span class="line">cover: https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210818111502.jpg</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
 <li>如何插入图片<ul>
 <li>打开github/pictures<br>进入issue<br>将图片复制到Write中，直接将链接贴至自己的blog中即可</li>
 </ul>
@@ -284,6 +269,16 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 <p><a href="https://blog.csdn.net/u012208219/article/details/106883001" title="Markdown">魔改hexo butterfly主题请参考</a>。</p>
 </blockquote>
 <ul>
+<li>自定义主题</li>
+</ul>
+<p>以 yilia 主题为例</p>
+<blockquote>
+<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>git clone <a href="https://github.com/%E4%BD%9C%E8%80%85%E5%90%8D/hexo-theme-%E4%B8%BB%E9%A2%98%E5%90%8D.git">https://github.com/作者名/hexo-theme-主题名.git</a> themes/主题名</p>
+</blockquote>
+<blockquote>
+<p>修改 hexo的配置文件 _config.yml 中<br>theme: yilia<br>再清理和生成下就可以了</p>
+</blockquote>
+<ul>
 <li>导航栏配置 <code>menu</code></li>
 <li>图片配置 <code>Image</code></li>
 <li>代码相关 <code>Code Blocks</code> </li>
@@ -295,13 +290,37 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 <li>右下角按钮 <code>Bottom right button</code></li>
 <li>引入css、js<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel=&quot;stylesheet&quot; href=&quot;https://XXX.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script src=&quot;https://XXX.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
-]]></content>
+<hr>
+<h4 id="评论系统报错"><a href="#评论系统报错" class="headerlink" title="评论系统报错"></a>评论系统报错</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">获取 Class 列表失败</span><br><span class="line">The app is archived, please restore in console before use. [400 GET /data/6pVKQMTaE6R44OanMdxlS9Ku-gzGzoHsz/classes]</span><br></pre></td></tr></table></figure>
+<p>应用因为超过 30 天没有访问，已经被归档。需要前往<a href="https://console.leancloud.cn/apps" title="Markdown">控制台</a>应用列表点击「激活」按钮，自助重启应用。</p>
+<center>
+
+<p>  <img src="https://user-images.githubusercontent.com/58502210/204495565-8b411721-7455-4138-b4b3-34ab89948f0e.png" alt="激活应用"></p>
+</center>]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/01/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -853,6 +872,17 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       <tags>
         <tag>Java</tag>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【软考】高级系统架构设计师</title>
+    <url>/2022/11/29/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>考证</category>
+      </categories>
+      <tags>
+        <tag>软考</tag>
       </tags>
   </entry>
 </search>
