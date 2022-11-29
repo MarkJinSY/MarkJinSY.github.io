@@ -18,7 +18,7 @@
 <li>多线程&amp;并发</li>
 </ul>
 </blockquote>
-<h1 id="Java基础篇"><a href="#Java基础篇" class="headerlink" title="Java基础篇"></a>Java基础篇</h1><h2 id="特性与基本语法"><a href="#特性与基本语法" class="headerlink" title="特性与基本语法"></a>特性与基本语法</h2><h3 id="1、Java基本数据类型"><a href="#1、Java基本数据类型" class="headerlink" title="1、Java基本数据类型"></a>1、Java基本数据类型</h3><table>
+<h1 id="Java基础篇"><a href="#Java基础篇" class="headerlink" title="Java基础篇"></a>Java基础篇</h1><h2 id="特性与基本语法"><a href="#特性与基本语法" class="headerlink" title="特性与基本语法"></a>特性与基本语法</h2><h3 id="Java基本数据类型"><a href="#Java基本数据类型" class="headerlink" title="Java基本数据类型"></a>Java基本数据类型</h3><table>
 <thead>
 <tr>
 <th>基本类型</th>
@@ -80,7 +80,7 @@
 <li>int为基础数据类型，Integer为引用类型，因而Integer的默认值为null，在使用前需先为其指定一个对象，否则会报错；</li>
 <li>基本数据类型在声名时系统会自动为其分配空间，而引用类型声明时只是分配了引用空间，必须实例化开辟数据空间后才可以为其赋值。将一个数组赋值给另一个数组时只是复制了一个引用，对一个数组的操作，在另一个数组中也可见。</li>
 </ul>
-<h3 id="2、装箱和拆箱"><a href="#2、装箱和拆箱" class="headerlink" title="2、装箱和拆箱"></a>2、装箱和拆箱</h3><p><strong>装箱即基本数据类型转换成包装器类型(int -&gt; Integer)；调用方法：Integer = valueOf(int)</strong></p>
+<h3 id="装箱和拆箱"><a href="#装箱和拆箱" class="headerlink" title="装箱和拆箱"></a>装箱和拆箱</h3><p><strong>装箱即基本数据类型转换成包装器类型(int -&gt; Integer)；调用方法：Integer = valueOf(int)</strong></p>
 <p><strong>拆箱即包装器类型转基本数据类型，(Integer -&gt; int); 调用方法：int = intValue</strong></p>
 <p>Java SE5之前，生成一个值为10的Integer对象：<br><code>Integer i = new Integer(10);</code><br>Java SE5之后提供了自动装箱的特性，生成一个数值为10的Integer对象：<br><code>Integer i = 10;</code></p>
 <ul>
@@ -96,11 +96,27 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 输出结果：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">false</span><br><span class="line">false</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p><strong>原因：</strong>某个范围内整形的个数是有限的，而浮点数不是。</p>
-<h2 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h2><p>1312321</p>
+<h3 id="equals和"><a href="#equals和" class="headerlink" title="equals和=="></a>equals和==</h3><ul>
+<li><strong>equals：</strong><ul>
+<li>值比较，用于比较两个对象的内容是否相等，由于所有类都继承自Object因而适用于所有对象。如果没有覆盖该方法的话，调用的仍是Object类中的方法，而Object类中的equals方法返回的是==的判断。</li>
+<li>使用equals进行比较时，把常量写在前，因为Object的equals object可能为null。</li>
+</ul>
+</li>
+<li><strong>==：</strong><ul>
+<li>比较的是变量()内存中存放的对象的()堆内存地址，用于判断两个对象的地址是否相同，即是否指向同一个对象。</li>
+<li>两边的操作数必须是同一类型或父子类之间才能编译通过。</li>
+<li>当比较值为数字时，值相等即为true，如int a=10, Long b=10L, double c=10.0都是相等的，因为他们都指向地址为10的堆。</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="+=操作符"></a>+=操作符</h3><p><code>+=</code> 操作符进行隐式自动类型转换，<code>a+=b</code>将隐式的加操作结果类型强制转换成为持有的结果类型，<code>a=a+b</code>则不会自动进行类型转换。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> a = <span class="number">127</span>;</span><br><span class="line"><span class="keyword">byte</span> b = <span class="number">127</span>;</span><br><span class="line">b = a + b; <span class="comment">//编译报错：cannot convert from int to byte</span></span><br><span class="line">b += a;</span><br><span class="line"></span><br><span class="line"><span class="keyword">short</span> s1 = <span class="number">1</span>;</span><br><span class="line">s1 = s1 + <span class="number">1</span>; <span class="comment">//报错：short类型在进行运算时会自动提升int类型，也就是s1+1的运算结果时int类型，而s1是short类型，因而编译会报错</span></span><br><span class="line">s1 += <span class="number">1</span>; <span class="comment">//正确写法，操作符会将右边的表达式结果强转为匹配左边的数据类型。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="重写与重载"><a href="#重写与重载" class="headerlink" title="重写与重载"></a>重写与重载</h3><h3 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h3><h3 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h3><h3 id="深拷贝和浅拷贝"><a href="#深拷贝和浅拷贝" class="headerlink" title="深拷贝和浅拷贝"></a>深拷贝和浅拷贝</h3><h3 id="String、StringBuilder、StringBuffer"><a href="#String、StringBuilder、StringBuffer" class="headerlink" title="String、StringBuilder、StringBuffer"></a>String、StringBuilder、StringBuffer</h3><h3 id="关于hashcode"><a href="#关于hashcode" class="headerlink" title="关于hashcode"></a>关于hashcode</h3><h3 id="Java的反射机制"><a href="#Java的反射机制" class="headerlink" title="Java的反射机制"></a>Java的反射机制</h3><h3 id="Exception和error"><a href="#Exception和error" class="headerlink" title="Exception和error"></a>Exception和error</h3><h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><h3 id="Java的四种引用，强弱虚软"><a href="#Java的四种引用，强弱虚软" class="headerlink" title="Java的四种引用，强弱虚软"></a>Java的四种引用，强弱虚软</h3><h2 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h2><p>1312321</p>
 <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>1231</p>
-<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><p>131231</p>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><h3 id="final"><a href="#final" class="headerlink" title="final"></a>final</h3><h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><p>131231</p>
 <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>1321</p>
-]]></content>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="对String的一些操作"><a href="#对String的一些操作" class="headerlink" title="对String的一些操作"></a>对String的一些操作</h3>]]></content>
       <categories>
         <category>Java</category>
         <category>面试</category>
@@ -111,22 +127,22 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/01/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>Linux</title>
+    <url>/2022/01/17/Linux/</url>
+    <content><![CDATA[<h1 id="Linux命令大全"><a href="#Linux命令大全" class="headerlink" title="Linux命令大全"></a>Linux命令大全</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><ul>
+<li>远程拷贝文件到本地<ul>
+<li><code>scp jsy@10.18.254.169:/home/XXX/XXX/filename ./</code></li>
+</ul>
+</li>
+<li>远程拷贝目录到本地<ul>
+<li><code>scp -r jsy@10.18.254.169:/home/XXX/dname ./</code></li>
+</ul>
+</li>
+</ul>
 ]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>demo</title>
@@ -146,6 +162,24 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       <tags>
         <tag>test</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/01/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>关于hexo</title>
@@ -207,6 +241,44 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 </ul>
 </li>
 </ul>
+<p><img src="https://user-images.githubusercontent.com/58502210/163540125-b7c6a9ed-4566-45d9-b4bd-7184f1d4f189.png" alt="关于插入图片"></p>
+<hr>
+<h4 id="关于删除博客"><a href="#关于删除博客" class="headerlink" title="关于删除博客"></a>关于删除博客</h4><ul>
+<li>普通删除方式</li>
+</ul>
+<blockquote>
+<p>Hexo正常删除文章的流程是先删除本地文件。<br>以原始文件：helloworld.md为例：<br>首先进入到source / _post 文件夹中，找到helloworld.md文件，在本地直接执行删除。<br>然后依次执行命令：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>此时已经成功删除文章了。</p>
+<ul>
+<li>已发布文章删除<blockquote>
+<p>如果你已经将文章git发布了，此时会在本地创建一个名为 .deploy_git的文件夹，并将生成的文件复制到该文件夹。<br>你需要删除本地的文章后，再删除 .deploy_git文件夹。</p>
+</blockquote>
+</li>
+</ul>
+<center>
+
+<p>  <img src="https://user-images.githubusercontent.com/58502210/204481834-aeec0b72-dc1c-4c88-aad4-1b3db5683943.png" alt="已发布文章删除"></p>
+</center>
+
+<p>最后依次执行正常删除的命令。</p>
+<ul>
+<li>强制性删除文件<br>如果你因为某些原因如我操作失误导致的无法删除的话，你可以尝试如下做法：</li>
+</ul>
+<ol>
+<li>将 <code>source\_posts</code> 文件夹中除需要被删除的文件外的所有 <code>.md</code> 文件复制到一个新文件夹中。</li>
+<li>在 <code>source</code> 文件夹中直接删除 <code>_posts</code> 整个文件夹。</li>
+<li>在 <code>source</code> 中新建一个文件夹并命名为 <code>_posts</code> ，此时这个文件夹内是空的。</li>
+<li>将复制出来的所有.md文件粘贴到新创建的 <code>_posts</code> 文件夹。</li>
+<li>最后依次执行普通删除的命令即可</li>
+</ol>
+<center>
+
+<p>  <img src="https://user-images.githubusercontent.com/58502210/204481394-77707fce-7b18-4053-bead-550d32359e04.png" alt="强制性删除文件"></p>
+</center>
+
+<p>这个方法主要针对于因为某些未知原因，或者本地文件错误或有缓存原因导致的，既然无法单个解决文章文件，那就换个思维方式，直接从整个文件夹入手。</p>
 <hr>
 <h4 id="一些重要的配置"><a href="#一些重要的配置" class="headerlink" title="一些重要的配置"></a>一些重要的配置</h4><blockquote>
 <p><a href="https://blog.csdn.net/u012208219/article/details/106883001" title="Markdown">魔改hexo butterfly主题请参考</a>。</p>
@@ -343,6 +415,11 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 </blockquote>
 <p><strong>注意</strong>：上述的<code>[1]:https:://github.com/younghz/Markdown &quot;Markdown&quot;</code>不出现在区块中。</p>
 <h4 id="4-9-图片"><a href="#4-9-图片" class="headerlink" title="4.9 图片"></a>4.9 图片</h4><p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>！</code>。</p>
+<ul>
+<li>关于图片居中的方法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//&lt;center&gt;标签必须和上下都空一行</span><br><span class="line"></span><br><span class="line">&lt;center&gt;</span><br><span class="line"></span><br><span class="line">  ![XXX](https://user-images.githubusercontent.com/58502210/204481394-77707fce-7b18-4053-bead-550d32359e04.png)</span><br><span class="line">&lt;/center&gt;</span><br></pre></td></tr></table></figure>
+
 <h4 id="4-10-反斜杠"><a href="#4-10-反斜杠" class="headerlink" title="4.10 反斜杠\"></a>4.10 反斜杠<code>\</code></h4><p>相当于<strong>反转义</strong>作用。使符号成为普通符号。</p>
 <h4 id="4-11-符号’-’"><a href="#4-11-符号’-’" class="headerlink" title="4.11 符号’`’"></a>4.11 符号’`’</h4><p>起到标记作用。如：</p>
 <blockquote>
@@ -402,6 +479,76 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
+    <title>【React Hooks系列】之useMemo (搬运)</title>
+    <url>/2022/01/21/useMemo/</url>
+    <content><![CDATA[<h3 id="简单的示例"><a href="#简单的示例" class="headerlink" title="简单的示例"></a>简单的示例</h3><p>在class的时代，我们一般是通过pureComponent来对数据进行一次浅比较，引入Hook特性后，我们可以使用Memo进行性能提升。<br>在此之前，我们来做一个实验</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">&quot;react-dom&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./styles.css&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> [m, setM] = useState(<span class="number">10</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行最外层盒子了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        最外层盒子</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Child1</span> <span class="attr">value</span>=<span class="string">&#123;n&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Child2</span> <span class="attr">value</span>=<span class="string">&#123;m&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="xml">            setN(n + 1);</span></span><br><span class="line"><span class="xml">          &#125;&#125;</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line"><span class="xml">          n+1</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="xml">            setM(m + 1);</span></span><br><span class="line"><span class="xml">          &#125;&#125;</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line"><span class="xml">          m+1</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child1</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行子组件1了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>子组件1上的n：&#123;props.value&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child2</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行子组件2了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>子组件2上的m：&#123;props.value&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rootElement = <span class="built_in">document</span>.getElementById(<span class="string">&quot;root&quot;</span>);</span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>, rootElement);</span><br></pre></td></tr></table></figure>
+<p>上面的代码我设置了两个子组件，分别读取父组件上的n跟m，然后父组件上面设置两个点击按钮，当点击后分别让设置的n、m加1。以下是第一次渲染时log控制台的结果</p>
+<blockquote>
+<p>执行最外层盒子了<br>执行子组件1了<br>执行子组件2了 </p>
+</blockquote>
+<p>跟想象中一样，render时先进入App函数，执行，发现里面的两个child函数，执行，创建虚拟dom，创建实体dom，最后将画面渲染到页面上。</p>
+<p><img src="https://user-images.githubusercontent.com/58502210/150492182-d28e2478-e2aa-4db3-a032-e9e8c55758cf.png" alt="1"></p>
+<p>使用Memo优化<br>当我点击n+1按钮时，此时state里面的n必然+1，也会重新引发render渲染，并把新的n更新到视图中。</p>
+<p><img src="https://user-images.githubusercontent.com/58502210/150492309-3892ecf0-b635-4bf7-8947-8a364b110c40.png" alt="2"></p>
+<p>我们再看控制台</p>
+<blockquote>
+<p>执行最外层盒子了<br>执行子组件1了<br>执行子组件2了 </p>
+<ul>
+<li>执行最外层盒子了 </li>
+<li>执行子组件1了 </li>
+<li>执行子组件2了 //为什么组件2也渲染了，里面的m没有变化 </li>
+</ul>
+</blockquote>
+<p>你会发现子组件2也渲染了，显然react重新把所有的函数都执行了一遍，把未曾有n数据的子组件2也重新执行了。<br>如何优化？我们可以使用memo把子组件改成以下代码</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> Child1 = React.memo(<span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行子组件1了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>子组件1上的n：&#123;props.value&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Child2 = React.memo(<span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行子组件2了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>子组件2上的m：&#123;props.value&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>再重新点击试试？</p>
+<blockquote>
+<p>执行最外层盒子了<br>执行子组件1了<br>执行子组件2了   </p>
+<ul>
+<li>执行最外层盒子了 </li>
+<li>执行子组件1了 </li>
+</ul>
+</blockquote>
+<p>会发现没有执行子组件2了</p>
+<p>这样的话react就会只执行对应state变化的组件，而没有变化的组件，则复用上一次的函数，也许memo也有memory的意思，代表记忆上一次的函数，不重新执行（我瞎猜的- -！！）</p>
+<h3 id="出现bug"><a href="#出现bug" class="headerlink" title="出现bug"></a>出现bug</h3><p>上面的代码虽然已经优化好了性能，但是会有一个bug</p>
+<p>上面的代码是由父组件控制<code>&lt;button&gt;</code>的，如果我把控制state的函数传递给子组件，会怎样呢？<code>&lt;Child2 value=&#123;m&#125; onClick=&#123;addM&#125; /&gt;</code> //addM是修改M的函数</p>
+<blockquote>
+<p>点击按钮让n+1<br>执行最外层盒子了<br>执行子组件1了<br>执行子组件2了     </p>
+<ul>
+<li>执行最外层盒子了 </li>
+<li>执行子组件1了 </li>
+<li>执行子组件2了 </li>
+</ul>
+</blockquote>
+<p>又重新执行子组件2。<br>为什么会这样？因为App重新执行了，它会修改addM函数的地址（函数是复杂数据类型），而addM又作为props传递给子组件2，那么就会引发子组件2函数的重新执行。</p>
+<h3 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h3><p>这时候就要用useMemo解决问题。<br><code>useMemo(()=&gt;&#123;&#125;,[])</code>, <code>useMemo</code>接收两个参数，分别是函数和一个数组（实际上是依赖），函数里return 函数,数组内存放依赖。</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> addM = useMemo(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      setM(&#123; <span class="attr">m</span>: m.m + <span class="number">1</span> &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [m]); <span class="comment">//表示监控m变化</span></span><br></pre></td></tr></table></figure>
+
+<p>使用方式就跟useEffect似的。</p>
+<h3 id="useCallback"><a href="#useCallback" class="headerlink" title="useCallback"></a>useCallback</h3><p>上面的代码很奇怪有没有</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">useMemo(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      setM(&#123; <span class="attr">m</span>: m.m + <span class="number">1</span> &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [m])</span><br></pre></td></tr></table></figure>
+
+<p>react就给我们准备了语法糖，useCallback。它是这样写的</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> addM = useCallback(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  setM(&#123; <span class="attr">m</span>: m.m + <span class="number">1</span> &#125;);</span><br><span class="line">&#125;, [m]);</span><br></pre></td></tr></table></figure>
+<p>是不是看上去正常多了?</p>
+<h3 id="最终代码"><a href="#最终代码" class="headerlink" title="最终代码"></a>最终代码</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useCallback, useMemo, useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">&quot;react-dom&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./styles.css&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> [m, setM] = useState(&#123; <span class="attr">m</span>: <span class="number">1</span> &#125;);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行最外层盒子了&quot;</span>);</span><br><span class="line">  <span class="keyword">const</span> addN = useMemo(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      setN(n + <span class="number">1</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [n]);</span><br><span class="line">  <span class="keyword">const</span> addM = useCallback(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setM(&#123; <span class="attr">m</span>: m.m + <span class="number">1</span> &#125;);</span><br><span class="line">  &#125;, [m]);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        最外层盒子</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Child1</span> <span class="attr">value</span>=<span class="string">&#123;n&#125;</span> <span class="attr">click</span>=<span class="string">&#123;addN&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Child2</span> <span class="attr">value</span>=<span class="string">&#123;m&#125;</span> <span class="attr">click</span>=<span class="string">&#123;addM&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;addN&#125;</span>&gt;</span>n+1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;addM&#125;</span>&gt;</span>m+1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> Child1 = React.memo(<span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行子组件1了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>子组件1上的n：&#123;props.value&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Child2 = React.memo(<span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;执行子组件2了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>子组件2上的m：&#123;props.value.m&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rootElement = <span class="built_in">document</span>.getElementById(<span class="string">&quot;root&quot;</span>);</span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>, rootElement);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>建议直接拷到codesanbox查看</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>使用memo可以帮助我们优化性能，让react没必要执行不必要的函数</li>
+<li>由于复杂数据类型的地址可能发生改变，于是传递给子组件的props也会发生变化，这样还是会执行不必要的函数，所以就用到了<code>useMemo</code>这个api</li>
+<li><code>useCallback</code>是<code>useMemo</code>的语法糖</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【React Hooks系列】之useState (搬运)</title>
     <url>/2022/01/13/useState/</url>
     <content><![CDATA[<h3 id="简单的示例"><a href="#简单的示例" class="headerlink" title="简单的示例"></a>简单的示例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义了一个button，当点击时，n+1并更新视图</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> add = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setN(n + <span class="number">1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;add&#125;</span>&gt;</span>+1,此时n:&#123;n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -440,24 +587,6 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>Linux</title>
-    <url>/2022/01/17/Linux/</url>
-    <content><![CDATA[<h1 id="Linux命令大全"><a href="#Linux命令大全" class="headerlink" title="Linux命令大全"></a>Linux命令大全</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><ul>
-<li>远程拷贝文件到本地<ul>
-<li><code>scp jsy@10.18.254.169:/home/XXX/XXX/filename ./</code></li>
-</ul>
-</li>
-<li>远程拷贝目录到本地<ul>
-<li><code>scp -r jsy@10.18.254.169:/home/XXX/dname ./</code></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【持续更新中】Java面试总结(多线程&amp;并发)</title>
     <url>/2022/01/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91/</url>
     <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
@@ -484,6 +613,242 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       <categories>
         <category>Java</category>
         <category>面试</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【持续更新中】Java面试总结(软件设计模式)</title>
+    <url>/2022/01/19/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
+<ul>
+<li><a href="(https://markjinsy.github.io/2022/01/12/Java%E5%9F%BA%E7%A1%80/)" title="Markdown">Java基础</a></li>
+<li>Java EE(Spring)</li>
+<li>数据库</li>
+<li>计算机网络</li>
+<li>操作系统</li>
+<li>算法与数据结构</li>
+<li>Nginx</li>
+<li>Redis</li>
+<li>设计模式</li>
+<li>JVM</li>
+<li>多线程&amp;并发</li>
+</ul>
+</blockquote>
+<h1 id="软件设计模式篇"><a href="#软件设计模式篇" class="headerlink" title="软件设计模式篇"></a>软件设计模式篇</h1><blockquote>
+<p>设计模式：软件开发人员在软件开发过程中面临的一般问题的解决方案。这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案。</p>
+</blockquote>
+<ul>
+<li><p><strong>创建型 ：</strong>主要解决对象的创建问题，封装复杂的创建过程，解耦对象的创建代码和使用代码，涉及到对象实例化的方式。(共 5 种模式)</p>
+</li>
+<li><p><strong>结构型 ：</strong>主要通过类或对象的不同组合，解耦不同功能的耦合</p>
+</li>
+<li><p><strong>行为型 ：</strong>主要解决的是类或对象之间的交互行为的耦合</p>
+</li>
+</ul>
+<h2 id="创建型"><a href="#创建型" class="headerlink" title="创建型"></a>创建型</h2><h3 id="单例模式-Singleton-Pattern"><a href="#单例模式-Singleton-Pattern" class="headerlink" title="单例模式(Singleton Pattern)"></a>单例模式(Singleton Pattern)</h3><ul>
+<li>单例模式这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。</li>
+</ul>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><blockquote>
+<p>1 . 单例模式只能有一个实例；<br>2 . 单例模式必须自己创建自己的唯一实例；<br>3 . 单例模式必须向其他所有对象提供这一实例。</p>
+</blockquote>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><ul>
+<li><p><strong>意图：</strong></p>
+<ul>
+<li>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</li>
+</ul>
+</li>
+<li><p><strong>主要解决：</strong></p>
+<ul>
+<li>一个全局使用的类频繁地创建与销毁。</li>
+</ul>
+</li>
+<li><p><strong>何时使用：</strong></p>
+<ul>
+<li>当您想控制实例数目，节省系统资源的时候。</li>
+</ul>
+</li>
+<li><p><strong>如何解决：</strong></p>
+<ul>
+<li>判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</li>
+</ul>
+</li>
+<li><p><strong>关键代码：</strong></p>
+<ul>
+<li>构造函数是私有的。</li>
+</ul>
+</li>
+<li><p><strong>应用实例：</strong></p>
+<ul>
+<li>一个班级只有一个班主任。</li>
+<li>Windows 是多进程多线程的，在操作一个文件的时候，就不可避免地出现多个进程或线程同时操作一个文件的现象，所以所有文件的处理必须通过唯一的实例来进行。</li>
+<li>一些设备管理器常常设计为单例模式，比如一个电脑有两台打印机，在输出的时候就要处理不能两台打印机打印同一个文件。</li>
+</ul>
+</li>
+<li><p><strong>优点：</strong></p>
+<ul>
+<li>在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如首页页面缓存）。</li>
+<li>避免对资源的多重占用（比如写文件操作）。</li>
+</ul>
+</li>
+<li><p><strong>缺点：</strong></p>
+<ul>
+<li>没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。</li>
+</ul>
+</li>
+<li><p><strong>使用场景：</strong></p>
+<ul>
+<li>要求生产唯一序列号。</li>
+<li>WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。</li>
+<li>创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。</li>
+</ul>
+</li>
+<li><p><strong>注意事项：</strong></p>
+<ul>
+<li><code>getInstance()</code> 方法中需要使用同步锁 <code>synchronized (Singleton.class)</code> 防止多线程同时进入造成 <code>instance</code> 被多次实例化。</li>
+</ul>
+</li>
+</ul>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>创建一个 SingleObject 类。SingleObject 类有它的私有构造函数和本身的一个静态实例。<br>SingleObject 类提供了一个静态方法，供外界获取它的静态实例。SingletonPatternDemo 类使用 SingleObject 类来获取 SingleObject 对象</p>
+<p><img src="https://user-images.githubusercontent.com/58502210/150334004-ae3caf1f-9b5e-440c-a7d6-1e007664a8d6.png" alt="单例模式"></p>
+<ul>
+<li>步骤一<br>创建一个SingleObject类。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingleObject</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">//创建 SingleObject 的一个对象</span></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> SingleObject instance = <span class="keyword">new</span> SingleObject();</span><br><span class="line"> </span><br><span class="line">   <span class="comment">//让构造函数为 private，这样该类就不会被实例化</span></span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="title">SingleObject</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">//获取唯一可用的对象</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingleObject <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">      <span class="keyword">return</span> instance;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showMessage</span><span class="params">()</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>步骤二<br>从SingleObject类获取唯一的对象</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonPatternDemo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">      <span class="comment">//不合法的构造函数</span></span><br><span class="line">      <span class="comment">//编译时错误：构造函数 SingleObject() 是不可见的</span></span><br><span class="line">      <span class="comment">//SingleObject object = new SingleObject();</span></span><br><span class="line"> </span><br><span class="line">      <span class="comment">//获取唯一可用的对象</span></span><br><span class="line">      SingleObject object = SingleObject.getInstance();</span><br><span class="line"> </span><br><span class="line">      <span class="comment">//显示消息</span></span><br><span class="line">      object.showMessage();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hello world!</span><br></pre></td></tr></table></figure>
+
+<h4 id="单例模式的几种实现方式"><a href="#单例模式的几种实现方式" class="headerlink" title="单例模式的几种实现方式"></a>单例模式的几种实现方式</h4><p>单例模式的实现有多种方式，如下所示：</p>
+<ul>
+<li><p><strong>1、懒汉式，线程不安全</strong></p>
+<ul>
+<li><p>是否 Lazy 初始化：是</p>
+</li>
+<li><p>是否多线程安全：否</p>
+</li>
+<li><p>实现难度：易</p>
+</li>
+<li><p>描述：这种方式是最基本的实现方式，这种实现最大的问题就是不支持多线程。因为没有加锁 synchronized，所以严格意义上它并不算单例模式。这种方式 lazy loading 很明显，不要求线程安全，在多线程不能正常工作。</p>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">        instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来介绍的几种实现方式都支持多线程，但是在性能上有所差异。</p>
+<ul>
+<li><p><strong>2、懒汉式，线程安全</strong></p>
+<ul>
+<li><p>是否 Lazy 初始化：是</p>
+</li>
+<li><p>是否多线程安全：是</p>
+</li>
+<li><p>实现难度：易</p>
+</li>
+<li><p>描述：这种方式具备很好的 lazy loading，能够在多线程中很好的工作，但是，效率很低，99% 情况下不需要同步。</p>
+</li>
+<li><p>优点：第一次调用才初始化，避免内存浪费。</p>
+</li>
+<li><p>缺点：必须加锁 synchronized 才能保证单例，但加锁会影响效率。<code>getInstance()</code> 的性能对应用程序不是很关键（该方法使用不太频繁）。</p>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">        instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>3、饿汉式</strong></p>
+<ul>
+<li><p>是否 Lazy 初始化：否</p>
+</li>
+<li><p>是否多线程安全：是</p>
+</li>
+<li><p>实现难度：易</p>
+</li>
+<li><p>描述：这种方式比较常用，但容易产生垃圾对象。</p>
+</li>
+<li><p>优点：没有加锁，执行效率会提高。</p>
+</li>
+<li><p>缺点：类加载时就初始化，浪费内存。<br>它基于 classloader 机制避免了多线程的同步问题，不过，instance 在类装载时就实例化，虽然导致类装载的原因有很多种，在单例模式中大多数都是调用 getInstance 方法， 但是也不能确定有其他的方式（或者其他的静态方法）导致类装载，这时候初始化 instance 显然没有达到 lazy loading 的效果。</p>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>4、双检锁/双重校验锁（DCL，即 double-checked locking）</strong></p>
+<ul>
+<li><p>JDK 版本：JDK1.5 起</p>
+</li>
+<li><p>是否 Lazy 初始化：是</p>
+</li>
+<li><p>是否多线程安全：是</p>
+</li>
+<li><p>实现难度：较复杂</p>
+</li>
+<li><p>描述：这种方式采用双锁机制，安全且在多线程情况下能保持高性能。<br>getInstance() 的性能对应用程序很关键。</p>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton singleton;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </span><br><span class="line">        <span class="keyword">synchronized</span> (Singleton.class) &#123;  </span><br><span class="line">        <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </span><br><span class="line">            singleton = <span class="keyword">new</span> Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> singleton;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>5、登记式/静态内部类</strong></p>
+<ul>
+<li><p>是否 Lazy 初始化：是</p>
+</li>
+<li><p>是否多线程安全：是</p>
+</li>
+<li><p>实现难度：一般</p>
+</li>
+<li><p>描述：这种方式能达到双检锁方式一样的功效，但实现更简单。对静态域使用延迟初始化，应使用这种方式而不是双检锁方式。这种方式只适用于静态域的情况，双检锁方式可在实例域需要延迟初始化时使用。这种方式同样利用了 classloader 机制来保证初始化 instance 时只有一个线程，它跟第 3 种方式不同的是：第 3 种方式只要 Singleton 类被装载了，那么 instance 就会被实例化（没有达到 lazy loading 效果），而这种方式是 Singleton 类被装载了，instance 不一定被初始化。因为 SingletonHolder 类没有被主动使用，只有通过显式调用 getInstance 方法时，才会显式装载 SingletonHolder 类，从而实例化 instance。想象一下，如果实例化 instance 很消耗资源，所以想让它延迟加载，另外一方面，又不希望在 Singleton 类加载时就实例化，因为不能确保 Singleton 类还可能在其他的地方被主动使用从而被加载，那么这个时候实例化 instance 显然是不合适的。这个时候，这种方式相比第 3 种方式就显得很合理。</p>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonHolder</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton INSTANCE = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> SingletonHolder.INSTANCE;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>6、枚举</strong></p>
+<ul>
+<li><p>JDK 版本：JDK1.5 起</p>
+</li>
+<li><p>是否 Lazy 初始化：否</p>
+</li>
+<li><p>是否多线程安全：是</p>
+</li>
+<li><p>实现难度：易</p>
+</li>
+<li><p>描述：这种实现方式还没有被广泛采用，但这是实现单例模式的最佳方法。它更简洁，自动支持序列化机制，绝对防止多次实例化。<br>这种方式是 Effective Java 作者 Josh Bloch 提倡的方式，它不仅能避免多线程同步问题，而且还自动支持序列化机制，防止反序列化重新创建新的对象，绝对防止多次实例化。不过，由于 JDK1.5 之后才加入 enum 特性，用这种方式写不免让人感觉生疏，在实际工作中，也很少用。<br>不能通过 reflection attack 来调用私有构造方法。</p>
+</li>
+</ul>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">whateverMethod</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>经验之谈：一般情况下，不建议使用第 1 种和第 2 种懒汉方式，建议使用第 3 种饿汉方式。只有在要明确实现 lazy loading 效果时，才会使用第 5 种登记方式。如果涉及到反序列化创建对象时，可以尝试使用第 6 种枚举方式。如果有其他特殊的需求，可以考虑使用第 4 种双检锁方式。</p>
+</blockquote>
+<h2 id="结构型"><a href="#结构型" class="headerlink" title="结构型"></a>结构型</h2><h2 id="行为型"><a href="#行为型" class="headerlink" title="行为型"></a>行为型</h2>]]></content>
+      <categories>
+        <category>Java</category>
+        <category>面试</category>
+        <category>程序设计</category>
       </categories>
       <tags>
         <tag>Java</tag>
