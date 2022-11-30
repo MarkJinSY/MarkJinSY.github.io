@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【持续更新中】Java面试总结(Java基础)</title>
+    <title>【持续更新中】Java学习(Java基础)</title>
     <url>/2022/01/12/Java%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
 <ul>
@@ -127,6 +127,65 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
+    <title>Linux</title>
+    <url>/2022/01/17/Linux/</url>
+    <content><![CDATA[<h1 id="Linux命令大全"><a href="#Linux命令大全" class="headerlink" title="Linux命令大全"></a>Linux命令大全</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><ul>
+<li>远程拷贝文件到本地<ul>
+<li><code>scp username@10.18.XXX.XXX:/home/XXX/XXX/filename ./</code></li>
+</ul>
+</li>
+<li>远程拷贝目录到本地<ul>
+<li><code>scp -r username@10.18.XXX.XXX:/home/XXX/dname ./</code></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于git</title>
+    <url>/2022/11/30/git/</url>
+    <content><![CDATA[<h2 id="简单记录一下git操作以及遇到的问题"><a href="#简单记录一下git操作以及遇到的问题" class="headerlink" title="简单记录一下git操作以及遇到的问题"></a>简单记录一下git操作以及遇到的问题</h2><hr>
+<h3 id="遇到的一些问题"><a href="#遇到的一些问题" class="headerlink" title="遇到的一些问题"></a>遇到的一些问题</h3><ol>
+<li><blockquote>
+<p>OpenSSL SSL_read: Connection was aborted, , errno 10053</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>原因</li>
+</ul>
+<p>Git默认限制推送的大小，运行命令更改限制大小即可</p>
+<ul>
+<li>解决方法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//调整全局请求缓存大小</span><br><span class="line">git config --global http.postBuffer 524288000</span><br><span class="line">git config --global https.postBuffer 524288000</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><blockquote>
+<p>Failed to connect to github.com port 443: Timed out</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>取消http 、https 代理</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置全局代理</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:你本机代理端口号</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>demo</title>
     <url>/2022/01/10/demo/</url>
     <content><![CDATA[<!-- <p align="center"> -->
@@ -143,24 +202,6 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </categories>
       <tags>
         <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux</title>
-    <url>/2022/01/17/Linux/</url>
-    <content><![CDATA[<h1 id="Linux命令大全"><a href="#Linux命令大全" class="headerlink" title="Linux命令大全"></a>Linux命令大全</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><ul>
-<li>远程拷贝文件到本地<ul>
-<li><code>scp jsy@10.18.254.169:/home/XXX/XXX/filename ./</code></li>
-</ul>
-</li>
-<li>远程拷贝目录到本地<ul>
-<li><code>scp -r jsy@10.18.254.169:/home/XXX/dname ./</code></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -568,6 +609,39 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
+    <title>【持续更新中】Java学习(多线程&amp;并发)</title>
+    <url>/2022/01/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
+<ul>
+<li><a href="(https://markjinsy.github.io/2022/01/12/Java%E5%9F%BA%E7%A1%80/)" title="Markdown">Java基础</a></li>
+<li>Java EE(Spring)</li>
+<li>数据库</li>
+<li>计算机网络</li>
+<li>操作系统</li>
+<li>算法与数据结构</li>
+<li>Nginx</li>
+<li>Redis</li>
+<li>设计模式</li>
+<li>JVM</li>
+<li>多线程&amp;并发</li>
+</ul>
+</blockquote>
+<h1 id="多线程-amp-并发篇"><a href="#多线程-amp-并发篇" class="headerlink" title="多线程&amp;并发篇"></a>多线程&amp;并发篇</h1><h3 id="进程、线程、程序的基本概念，以及他们之间的联系"><a href="#进程、线程、程序的基本概念，以及他们之间的联系" class="headerlink" title="进程、线程、程序的基本概念，以及他们之间的联系"></a>进程、线程、程序的基本概念，以及他们之间的联系</h3><ul>
+<li><strong>线程</strong>与进程相似，但线程是比进程更小的一个执行单位。一个进程在其执行过程中可以产生多个线程。与进程不同的是同类的多个线程共享一块内存空间和一组系统资源，所以系统在产生一个线程或是在各个线程之间切换工作时，负担比进程小得多，正因如此，线程也被成为轻量级进程。</li>
+<li><strong>程序</strong>是含有指令和数据的文件，被存储在磁盘或其他的数据存储设备中，也就是程序是静态的代码。</li>
+<li><strong>进程</strong>是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建、运行到消亡的过程。简单来说，一个进程就是一个执行中的程序，它在计算机中一个指令接着一个指令的执行着，同时，每个进程还占用某些系统资源如CPU时间，内存空间，文件，输入输出设备的使用权等等。换句话说，当程序在执行时，将会被操作系统载入内存中。线程是进程划分成的更小的运行单位。线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会互相影响。从另一个角度来说，进程处于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎相同时执行以上一个的程序段。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【React Hooks系列】之useState (搬运)</title>
     <url>/2022/01/13/useState/</url>
     <content><![CDATA[<h3 id="简单的示例"><a href="#简单的示例" class="headerlink" title="简单的示例"></a>简单的示例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义了一个button，当点击时，n+1并更新视图</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> add = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setN(n + <span class="number">1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;add&#125;</span>&gt;</span>+1,此时n:&#123;n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -606,40 +680,33 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>【持续更新中】Java面试总结(多线程&amp;并发)</title>
-    <url>/2022/01/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91/</url>
-    <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
-<ul>
-<li><a href="(https://markjinsy.github.io/2022/01/12/Java%E5%9F%BA%E7%A1%80/)" title="Markdown">Java基础</a></li>
-<li>Java EE(Spring)</li>
-<li>数据库</li>
-<li>计算机网络</li>
-<li>操作系统</li>
-<li>算法与数据结构</li>
-<li>Nginx</li>
-<li>Redis</li>
-<li>设计模式</li>
-<li>JVM</li>
-<li>多线程&amp;并发</li>
-</ul>
-</blockquote>
-<h1 id="多线程-amp-并发篇"><a href="#多线程-amp-并发篇" class="headerlink" title="多线程&amp;并发篇"></a>多线程&amp;并发篇</h1><h3 id="进程、线程、程序的基本概念，以及他们之间的联系"><a href="#进程、线程、程序的基本概念，以及他们之间的联系" class="headerlink" title="进程、线程、程序的基本概念，以及他们之间的联系"></a>进程、线程、程序的基本概念，以及他们之间的联系</h3><ul>
-<li><strong>线程</strong>与进程相似，但线程是比进程更小的一个执行单位。一个进程在其执行过程中可以产生多个线程。与进程不同的是同类的多个线程共享一块内存空间和一组系统资源，所以系统在产生一个线程或是在各个线程之间切换工作时，负担比进程小得多，正因如此，线程也被成为轻量级进程。</li>
-<li><strong>程序</strong>是含有指令和数据的文件，被存储在磁盘或其他的数据存储设备中，也就是程序是静态的代码。</li>
-<li><strong>进程</strong>是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建、运行到消亡的过程。简单来说，一个进程就是一个执行中的程序，它在计算机中一个指令接着一个指令的执行着，同时，每个进程还占用某些系统资源如CPU时间，内存空间，文件，输入输出设备的使用权等等。换句话说，当程序在执行时，将会被操作系统载入内存中。线程是进程划分成的更小的运行单位。线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会互相影响。从另一个角度来说，进程处于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎相同时执行以上一个的程序段。</li>
-</ul>
+    <title>【软考】高级系统架构设计师</title>
+    <url>/2022/11/29/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/</url>
+    <content><![CDATA[<p><a href="https://note.youdao.com/ynoteshare/index.html?id=fcb5dfefd40b99bca2595eb2b357caf8&type=notebook&_time=1669722101758" title="Markdown">有道云</a></p>
+<p><a href="https://lisahust.github.io/notebook1_web/1_0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80.html" title="Markdown">笔记</a></p>
+<p><a href="https://github.com/xxlllq/system_architect" title="Markdown">其他资料</a></p>
+<p><a href="https://www.aliyundrive.com/s/4qZSY42PcPn" title="Markdown">阿里云</a> 提取码：1zn9（作者联系QQ：2679450097）</p>
 ]]></content>
       <categories>
-        <category>Java</category>
-        <category>面试</category>
+        <category>考证</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>面试</tag>
+        <tag>软考</tag>
       </tags>
   </entry>
   <entry>
-    <title>【持续更新中】Java面试总结(软件设计模式)</title>
+    <title>【软考】高级系统项目管理师</title>
+    <url>/2022/11/30/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>考证</category>
+      </categories>
+      <tags>
+        <tag>软考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【持续更新中】Java学习(软件设计模式)</title>
     <url>/2022/01/19/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
 <ul>
@@ -872,17 +939,6 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       <tags>
         <tag>Java</tag>
         <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【软考】高级系统架构设计师</title>
-    <url>/2022/11/29/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>考证</category>
-      </categories>
-      <tags>
-        <tag>软考</tag>
       </tags>
   </entry>
 </search>
