@@ -145,6 +145,28 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
+    <title>demo</title>
+    <url>/2022/01/10/demo/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="5683ac4d7f2615ea9f60a29658cbe96c5224e0a07d3b74e3af1955da15fe0537">165d50f05814027fb7fe5e4ae8a088d8bf1dc7109a1d76247213c75f7f4dcb37bf356777a80e607bdc5f15db3b9f447c651f882b688f828efc0f6ff19848fb2315c9ff853de0a0adf58dc7c9c8818c47f716b219db88d940e8e76c56832a1075908a70303ef8ed71209a2792c143fb6eb9958c110b6e383174db9561249b8a370af04e9bb5e30ba988db8332684be66449c11d119df751a88c31743a04979c325d4089412dbce6f4fa5a79735de182018eb6110ab2b4f8f07c0a956b824227111dca82013c1af77d0dbdec7644d114b6cc694d4b65965b792ead53c15b7e7f52dc94bd79d23f6d2cff968642e461e3da804154b9a742d96aaa354bd7134b93a1e43d13ec604cdb9fe24c01e3c10db6ec1cf472aa460daef701e3b1f69a511452812b241d9c15351745e376d689ef8fd6035885c89a0d0391845ba0f3ebc49b5cf0e96e72768c84b24696e7635a56fa663add94396b5e06642e193bdc23699c31c7b22bcf8d6629cfec2b917b3dcb5c72342ac5646e718d47ade2e81a429a6f96ec882c5ddeb4c76019305bc15e76b7bea0ef840c29078dc68713832b3f6fc29267d2d4dd3afcfa8969ced9b2dd12b25b1c7f0de8a7992321b6e1cabac0a17d1ffc94ae556606016724e010f555749665c737a089381727fbe0eec69425347f990e3002dd782b7030b6a46702baff9b6bae579e67ba8b873a34e24b2d091996310d1040a38820cb5bd0a79306e032d334ab8e232bb9e4b9786e3e6a00de986565e851b43afc35126e07afc3cf851132fe3ff3590a0296f1336da20413d36681044b9394f8fd160e0c65565d59f183febca1eb750270b2e09c7829371cdfe51cfa08c492ac9de03ec1a440438c6c4ba0a02ddead1391f42a26976cdf4f3902d9de075082699bff5ce226db4278f555e463a87b3009d3a4e83cfa67e5667293dd242114196346898c3180105a10d0ff042110caf653a9a24fa30cbecc1820a175ed7c0991ea0e4f4c6806f5e1181806b892124f044b6b382457939db42bbe9b04e740a93e845f346ae4fa6f4205feb04dccad26a9569a26b0f6986e29c150679a770ff23d4ef52f4f1abda3c8c70bf61f8e7f0f75f37afded4f41fc73817cf10d6e13dcb0c1f0e2b16965ceaa1802cbe739982cba6cb73f653d3b8ec472d06c0456277d0a4120dc1b5a2c3358061553ec67661e7ca9c6db84a7f9b0f09d75967202e45167fa090a730856eb01b22dcd65864a8a68de13d95bfb9b467b66dee6f56dd026a08c0023cfbacae27b67e878bed57daa63d589ca18e932ee37945de82206fdc073e8518966ec5b33e82a6b9b7673e3d9e19918929f71cc3c1310e30a66d2ac8c6638016bd99b6d9fb11e78b191e7bbad6c9f8bc24cf58379f17d111efffae444c707cf1965f0a6ba07602b5acfc836e4dbb04a8e6403c043a53915cac15dc2d943b1324ee5cbd0246a5f683b05d8a76a674ce2ea8c3818949d410e689278d064f391c39d2e8886dd33410dbc2131774c32045e3f2040616bd3ba642c88e0f9b6eef77137dfca54b492c5385b7c8f4df38aef181858862f94d90c2cff3c19bdfd0b5c86b6b1bdc09fe863809420004a8508079bf154c5348a84cb736b7ffb9560e2e2ce18f1365aec4331c2e1a2b9f59b0fe352db28c6c774f4308dd9bc9dd37a7c11c444bda77496bbab2244f2b817d11f6c8597b8913b2ac45add081da81824140c0ae08d2fb8125d6bf3665b9b042f34cec3d1bd2215c7a5216b718cf42a311670d2f04d6d25213c6b304732ba2e8c500dca708fc067ae33730ada016a9c4719dcf745469641547f8861f3ab31db25f10fc1299a678c17b70544ed07b0cc7348e687c947d9bc2387de302c572f5e8333dcd50b1846d7918d77c07991a15b0aa48220df0522d02ec6f62d1c72197262167d858a1176ae137777ca38cffa</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码才能访问。</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于git</title>
     <url>/2022/11/30/git/</url>
     <content><![CDATA[<h2 id="简单记录一下git操作以及遇到的问题"><a href="#简单记录一下git操作以及遇到的问题" class="headerlink" title="简单记录一下git操作以及遇到的问题"></a>简单记录一下git操作以及遇到的问题</h2><hr>
@@ -186,23 +208,22 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>demo</title>
-    <url>/2022/01/10/demo/</url>
-    <content><![CDATA[<!-- <p align="center"> -->
-<p> <img src="https://img.shields.io/github/license/Chocolate1999/hexo-blog-lionkk.svg" alt="License"><a href="https://github.com/Chocolate1999/hexo-blog-lionkk/network"> <img src="https://img.shields.io/github/forks/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub forks"></a> <a href="https://github.com/Chocolate1999/hexo-blog-lionkk/stargazers"> <img src="https://img.shields.io/github/stars/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub stars"></a><br><a href="https://github.com/Chocolate1999/hexo-blog-lionkk/releases"><img alt="Version" src="https://img.shields.io/badge/release-2.0.0-blue"></a><a href="https://yangchaoyi.vip/"><img alt="Author" src="https://img.shields.io/badge/author-yangchaoyi-blur"></a><br><a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-4.0+-0e83c"></a><br><a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-8.0+-blur"></a></p>
-<!-- </p> -->
+    <title>Hello World</title>
+    <url>/2022/01/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><ul>
-<li>测试一下<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure></li>
-</ul>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
   </entry>
   <entry>
     <title>关于hexo</title>
@@ -278,11 +299,11 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>此时已经成功删除文章了。</p>
 <ul>
-<li>已发布文章删除<blockquote>
+<li>已发布文章删除</li>
+</ul>
+<blockquote>
 <p>如果你已经将文章git发布了，此时会在本地创建一个名为 .deploy_git的文件夹，并将生成的文件复制到该文件夹。<br>你需要删除本地的文章后，再删除 .deploy_git文件夹。</p>
 </blockquote>
-</li>
-</ul>
 <center>
 
 <p>  <img src="https://user-images.githubusercontent.com/58502210/204481834-aeec0b72-dc1c-4c88-aad4-1b3db5683943.png" alt="已发布文章删除"></p>
@@ -306,8 +327,10 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 
 <p>这个方法主要针对于因为某些未知原因，或者本地文件错误或有缓存原因导致的，既然无法单个解决文章文件，那就换个思维方式，直接从整个文件夹入手。</p>
 <hr>
+<h4 id="加密博客"><a href="#加密博客" class="headerlink" title="加密博客"></a>加密博客</h4><p>参考该 <a href="https://blog.csdn.net/weixin_58068682/article/details/116614622" title="Markdown">博客</a> 日后再同步到自己的博客</p>
+<hr>
 <h4 id="一些重要的配置"><a href="#一些重要的配置" class="headerlink" title="一些重要的配置"></a>一些重要的配置</h4><blockquote>
-<p><a href="https://blog.csdn.net/u012208219/article/details/106883001" title="Markdown">魔改hexo butterfly主题请参考</a>。</p>
+<p><a href="https://blog.csdn.net/u012208219/article/details/106883001" title="Markdown">魔改hexo butterfly主题请参考</a>。<br><a href="https://butterfly.js.org/" title="Markdown">butterfly官方文档</a></p>
 </blockquote>
 <ul>
 <li>自定义主题</li>
@@ -329,8 +352,9 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
 <li>背景特效 <code>Background effects</code></li>
 <li>侧边栏 <code>aside</code></li>
 <li>右下角按钮 <code>Bottom right button</code></li>
-<li>引入css、js<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel=&quot;stylesheet&quot; href=&quot;https://XXX.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script src=&quot;https://XXX.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+<li>引入css、js</li>
 </ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel=&quot;stylesheet&quot; href=&quot;https://XXX.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script src=&quot;https://XXX.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <hr>
 <h4 id="评论系统报错"><a href="#评论系统报错" class="headerlink" title="评论系统报错"></a>评论系统报错</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">获取 Class 列表失败</span><br><span class="line">The app is archived, please restore in console before use. [400 GET /data/6pVKQMTaE6R44OanMdxlS9Ku-gzGzoHsz/classes]</span><br></pre></td></tr></table></figure>
 <p>应用因为超过 30 天没有访问，已经被归档。需要前往<a href="https://console.leancloud.cn/apps" title="Markdown">控制台</a>应用列表点击「激活」按钮，自助重启应用。</p>
@@ -344,24 +368,6 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/01/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -609,39 +615,6 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>【持续更新中】Java学习(多线程&amp;并发)</title>
-    <url>/2022/01/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91/</url>
-    <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
-<ul>
-<li><a href="(https://markjinsy.github.io/2022/01/12/Java%E5%9F%BA%E7%A1%80/)" title="Markdown">Java基础</a></li>
-<li>Java EE(Spring)</li>
-<li>数据库</li>
-<li>计算机网络</li>
-<li>操作系统</li>
-<li>算法与数据结构</li>
-<li>Nginx</li>
-<li>Redis</li>
-<li>设计模式</li>
-<li>JVM</li>
-<li>多线程&amp;并发</li>
-</ul>
-</blockquote>
-<h1 id="多线程-amp-并发篇"><a href="#多线程-amp-并发篇" class="headerlink" title="多线程&amp;并发篇"></a>多线程&amp;并发篇</h1><h3 id="进程、线程、程序的基本概念，以及他们之间的联系"><a href="#进程、线程、程序的基本概念，以及他们之间的联系" class="headerlink" title="进程、线程、程序的基本概念，以及他们之间的联系"></a>进程、线程、程序的基本概念，以及他们之间的联系</h3><ul>
-<li><strong>线程</strong>与进程相似，但线程是比进程更小的一个执行单位。一个进程在其执行过程中可以产生多个线程。与进程不同的是同类的多个线程共享一块内存空间和一组系统资源，所以系统在产生一个线程或是在各个线程之间切换工作时，负担比进程小得多，正因如此，线程也被成为轻量级进程。</li>
-<li><strong>程序</strong>是含有指令和数据的文件，被存储在磁盘或其他的数据存储设备中，也就是程序是静态的代码。</li>
-<li><strong>进程</strong>是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建、运行到消亡的过程。简单来说，一个进程就是一个执行中的程序，它在计算机中一个指令接着一个指令的执行着，同时，每个进程还占用某些系统资源如CPU时间，内存空间，文件，输入输出设备的使用权等等。换句话说，当程序在执行时，将会被操作系统载入内存中。线程是进程划分成的更小的运行单位。线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会互相影响。从另一个角度来说，进程处于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎相同时执行以上一个的程序段。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>面试</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【React Hooks系列】之useState (搬运)</title>
     <url>/2022/01/13/useState/</url>
     <content><![CDATA[<h3 id="简单的示例"><a href="#简单的示例" class="headerlink" title="简单的示例"></a>简单的示例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义了一个button，当点击时，n+1并更新视图</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> initValue = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(initValue);</span><br><span class="line">  <span class="keyword">const</span> add = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setN(n + <span class="number">1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;add&#125;</span>&gt;</span>+1,此时n:&#123;n&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -680,29 +653,36 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       </tags>
   </entry>
   <entry>
-    <title>【软考】高级系统架构设计师</title>
-    <url>/2022/11/29/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/</url>
-    <content><![CDATA[<p><a href="https://note.youdao.com/ynoteshare/index.html?id=fcb5dfefd40b99bca2595eb2b357caf8&type=notebook&_time=1669722101758" title="Markdown">有道云</a></p>
-<p><a href="https://lisahust.github.io/notebook1_web/1_0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80.html" title="Markdown">笔记</a></p>
-<p><a href="https://github.com/xxlllq/system_architect" title="Markdown">其他资料</a></p>
-<p><a href="https://www.aliyundrive.com/s/4qZSY42PcPn" title="Markdown">阿里云</a> 提取码：1zn9（作者联系QQ：2679450097）</p>
+    <title>【持续更新中】Java学习(多线程&amp;并发)</title>
+    <url>/2022/01/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="记录一下Java面试的必备八股文"><a href="#记录一下Java面试的必备八股文" class="headerlink" title="记录一下Java面试的必备八股文"></a>记录一下Java面试的必备八股文</h1><h1 id="整体知识点"><a href="#整体知识点" class="headerlink" title="整体知识点"></a>整体知识点</h1><blockquote>
+<ul>
+<li><a href="(https://markjinsy.github.io/2022/01/12/Java%E5%9F%BA%E7%A1%80/)" title="Markdown">Java基础</a></li>
+<li>Java EE(Spring)</li>
+<li>数据库</li>
+<li>计算机网络</li>
+<li>操作系统</li>
+<li>算法与数据结构</li>
+<li>Nginx</li>
+<li>Redis</li>
+<li>设计模式</li>
+<li>JVM</li>
+<li>多线程&amp;并发</li>
+</ul>
+</blockquote>
+<h1 id="多线程-amp-并发篇"><a href="#多线程-amp-并发篇" class="headerlink" title="多线程&amp;并发篇"></a>多线程&amp;并发篇</h1><h3 id="进程、线程、程序的基本概念，以及他们之间的联系"><a href="#进程、线程、程序的基本概念，以及他们之间的联系" class="headerlink" title="进程、线程、程序的基本概念，以及他们之间的联系"></a>进程、线程、程序的基本概念，以及他们之间的联系</h3><ul>
+<li><strong>线程</strong>与进程相似，但线程是比进程更小的一个执行单位。一个进程在其执行过程中可以产生多个线程。与进程不同的是同类的多个线程共享一块内存空间和一组系统资源，所以系统在产生一个线程或是在各个线程之间切换工作时，负担比进程小得多，正因如此，线程也被成为轻量级进程。</li>
+<li><strong>程序</strong>是含有指令和数据的文件，被存储在磁盘或其他的数据存储设备中，也就是程序是静态的代码。</li>
+<li><strong>进程</strong>是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建、运行到消亡的过程。简单来说，一个进程就是一个执行中的程序，它在计算机中一个指令接着一个指令的执行着，同时，每个进程还占用某些系统资源如CPU时间，内存空间，文件，输入输出设备的使用权等等。换句话说，当程序在执行时，将会被操作系统载入内存中。线程是进程划分成的更小的运行单位。线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会互相影响。从另一个角度来说，进程处于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎相同时执行以上一个的程序段。</li>
+</ul>
 ]]></content>
       <categories>
-        <category>考证</category>
+        <category>Java</category>
+        <category>面试</category>
       </categories>
       <tags>
-        <tag>软考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【软考】高级系统项目管理师</title>
-    <url>/2022/11/30/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>考证</category>
-      </categories>
-      <tags>
-        <tag>软考</tag>
+        <tag>Java</tag>
+        <tag>面试</tag>
       </tags>
   </entry>
   <entry>
@@ -939,6 +919,32 @@ IntegerCache的实现：<figure class="highlight java"><table><tr><td class="cod
       <tags>
         <tag>Java</tag>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【软考】高级系统架构设计师</title>
+    <url>/2022/11/29/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/</url>
+    <content><![CDATA[<p><a href="https://note.youdao.com/ynoteshare/index.html?id=fcb5dfefd40b99bca2595eb2b357caf8&type=notebook&_time=1669722101758" title="Markdown">有道云</a></p>
+<p><a href="https://lisahust.github.io/notebook1_web/1_0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80.html" title="Markdown">笔记</a></p>
+<p><a href="https://github.com/xxlllq/system_architect" title="Markdown">其他资料</a></p>
+<p><a href="https://www.aliyundrive.com/s/4qZSY42PcPn" title="Markdown">阿里云</a> 提取码：1zn9（作者联系QQ：2679450097）</p>
+]]></content>
+      <categories>
+        <category>考证</category>
+      </categories>
+      <tags>
+        <tag>软考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【软考】高级系统项目管理师</title>
+    <url>/2022/11/30/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>考证</category>
+      </categories>
+      <tags>
+        <tag>软考</tag>
       </tags>
   </entry>
 </search>
